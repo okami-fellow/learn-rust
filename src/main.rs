@@ -1,5 +1,5 @@
 fn main() {
     // Делаем отображение имени динамичным
-    let name = "dude".to_string();
-    println!("Hello, my {name} (^_^)/");
+    let name = "друг".to_string();
+    println!("Привет, мой {name} (^_^)/\n Вот и пример релиза.");
 }
