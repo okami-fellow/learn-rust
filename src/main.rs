@@ -1,11 +1,15 @@
-fn main() {
-    let name = "дружбан".to_string();
-    println!("Привет, мой {name} (^_^)/\n Вот и пример релиза.");
+use std::io;
 
-    let mut x = 1;
-    {
-        let mut x = x;
-        x += 2;
-    }
-    println!("{x}");
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line( &mut input).unwrap();
+
+    let weight: f32= input.trim().parse().unwrap();
+
+    let weight_on_mars = calculate_weight_on_mars(weight);
+    println!("I would weight {weight_on_mars} on Mars");
+}
+
+fn calculate_weight_on_mars(weight: f32) -> f32 {
+    (weight / 9.81) * 3.711
 }
